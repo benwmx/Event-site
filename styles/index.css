@@ -1,0 +1,26 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.desktop-version {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-version {
+    display: none;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .desktop-version {
+    display: block;
+  }
+}

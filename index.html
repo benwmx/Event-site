@@ -6,26 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/menu-btn.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <div class="upper-header">
+        <div class="upper-header desktop-version">
             <ul>
                 <li><a href="#"><img src="./img/sponsors/facebook.png" alt="image of facebook icon"></a></li>
                 <li><a href="#"><img src="./img/sponsors/twitter.png" alt="image of twitter icon"></a></li>
                 <li>French</li>
             </ul>
         </div>
-        <nav>
-            <a href="#"><img src="./img/event-logo-gray.png" alt=""></a>
+        <nav class="navbar">
+            <a class="desktop-version" href="#"><img src="./img/event-logo-gray.png" alt=""></a>
             <div class="menu-btn">
                 <div class="menu-burger"></div>
             </div>
-            <ul>
-                <li><a href="#">About</a></li>
+            <ul class="desktop-version">
+                <li><a href="./about.html">About</a></li>
                 <li><a href="#">Program</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Sponsor</a></li>
@@ -84,9 +84,13 @@
                 <p>Get opportunities to network with experts from Morocco and abroad.</p>
             </li>
         </ul>
-        <a href="#">Join the Summit</a>
-        <a href="#">see the whole program</a>
+        <a class="mobile-version" href="#">Join the Summit</a>
+        <a class="desktop-version" href="#">see the whole program</a>
 
+    </section>
+    <section class="speakers">
+        <h3>Featured speakers</h3>
+        <div class="line"></div>
     </section>
     <section class="partners">
         <h3>Partners</h3>.
@@ -107,11 +111,12 @@
             </li>
         </ul>
     </section>
-    <footer>
+    <footer class="footer">
         <img src="./img/logo-black.png" alt="image of moroccan developers association">
         <p>2021 Moroccan Developers Association Rights Reserved</p>
     </footer>
     <script src="./dynamic/menu-logo.js"></script>
+    <script src="./dynamic/speakers.js"></script>
 </body>
 
 </html>
