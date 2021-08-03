@@ -1,0 +1,66 @@
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
+
+.menu-burger {
+  width: 40px;
+  height: 4px;
+  background: #272a31;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.menu-burger::before,
+.menu-burger::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #272a31;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.menu-burger::before {
+  transform: translateY(-16px);
+}
+
+.menu-burger::after {
+  transform: translateY(16px);
+}
+
+.menu-btn.open-menu .menu-burger {
+  transform: translateX(-50px);
+  background: transparent;
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+}
+
+.menu-btn.open-menu .menu-burger::before {
+  transform: rotate(45deg) translate(40px, -40px);
+  -webkit-transform: rotate(45deg) translate(40px, -40px);
+  -moz-transform: rotate(45deg) translate(40px, -40px);
+  -ms-transform: rotate(45deg) translate(40px, -40px);
+  -o-transform: rotate(45deg) translate(40px, -40px);
+}
+
+.menu-btn.open-menu .menu-burger::after {
+  transform: rotate(-45deg) translate(40px, 40px);
+  -webkit-transform: rotate(-45deg) translate(40px, 40px);
+  -moz-transform: rotate(-45deg) translate(40px, 40px);
+  -ms-transform: rotate(-45deg) translate(40px, 40px);
+  -o-transform: rotate(-45deg) translate(40px, 40px);
+}
