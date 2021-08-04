@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/menu-btn.css">
+    <link rel="stylesheet" href="./styles/menu.css">
     <title>Document</title>
 </head>
 
@@ -43,48 +44,47 @@
             <br>
             2021
         </h1>
-        <details>
-            <summary>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae quam, sed consectetur,
-                facilis sunt illum reprehenderit aspernatur saepe a ipsam voluptates impedit error sit, veniam ex unde
-                modi quae!
-            </summary>
-            <div class="time-location">
-                <h3 class="time">2021.10.15(MON) ~ 16 (SUN)</h3>
-                <p class="location">@ Hotel Agadir Beach Club</p>
-            </div>
-        </details>
+        <div class="details">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae quam, sed consectetur,
+            facilis sunt illum reprehenderit aspernatur saepe a ipsam voluptates impedit error sit, veniam ex unde
+            modi quae!
+        </div>
+        <div class="time-location">
+            <h3 class="time">2021.10.15(MON) ~ 16 (SUN)</h3>
+            <p class="location">@ Hotel Agadir Beach Club</p>
+        </div>
 
     </main>
     <section class="program">
-        <h3>Main Program</h3>
+        <h3 class="program-title">Main Program</h3>
         <div class="line"></div>
         <ul class="programs">
-            <li><img src="./img/lecture.png" alt="icon of a prople listening to a speaker">
-                <h4>Lecture</h4>
-                <p>Listen to the speakers from various backgrounds and experiences of computer science about the new
+            <li><img class="icon item" src="./img/lecture.png" alt="icon of a prople listening to a speaker">
+                <h4 class='item'>Lecture</h4>
+                <p class='item'>Listen to the speakers from various backgrounds and experiences of computer science
+                    about the new
                     technologies.</p>
             </li>
-            <li><img src="./img/exhibition.png" alt="icon people in an exhibition">
-                <h4>Exhibition</h4>
-                <p>Appreciate various creations of senior and aspiring developers.</p>
+            <li><img class="icon item" src="./img/exhibition.png" alt="icon people in an exhibition">
+                <h4 class='item'>Exhibition</h4>
+                <p class='item'>Appreciate various creations of senior and aspiring developers.</p>
             </li>
-            <li><img src="./img/forum.png" alt="icon of forum">
-                <h4>Forum</h4>
-                <p></p>Have the time to share youtr thoughts and opinions with experts for each topic.
-            </li>
-            <li>
-                <img src="./img/workshop.png" alt="icon of workshop" />
-                <h4>Workshop</h4>
-                <p>Try creating your own work using open source license rather than just watching.</p>
+            <li><img class="icon item" src="./img/forum.png" alt="icon of forum">
+                <h4 class='item'>Forum</h4>
+                <p class='item'>Have the time to share youtr thoughts and opinions with experts for each topic.</p>
             </li>
             <li>
-                <img src="./img/ignite.png" alt="icon of network of people">
-                <h4>Ignite</h4>
-                <p>Get opportunities to network with experts from Morocco and abroad.</p>
+                <img class="icon item" src="./img/workshop.png" alt="icon of workshop" />
+                <h4 class='item'>Workshop</h4>
+                <p class='item'>Try creating your own work using open source license rather than just watching.</p>
+            </li>
+            <li>
+                <img class="icon item" src="./img/ignite.png" alt="icon of network of people">
+                <h4 class='item'>Ignite</h4>
+                <p class='item'>Get opportunities to network with experts from Morocco and abroad.</p>
             </li>
         </ul>
-        <a class="mobile-version" href="#">Join the Summit</a>
+        <a class="mobile-version button-join" href="#">Join the Summit</a>
         <a class="desktop-version" href="#">see the whole program</a>
 
     </section>
@@ -115,8 +115,8 @@
         <img src="./img/logo-black.png" alt="image of moroccan developers association">
         <p>2021 Moroccan Developers Association Rights Reserved</p>
     </footer>
-    <script src="./dynamic/menu-logo.js"></script>
     <script src="./dynamic/speakers.js"></script>
+    <script src="./dynamic/menu.js"></script>
 </body>
 
 </html>

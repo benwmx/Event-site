@@ -42,6 +42,7 @@ const speakers = [
 const section = document.querySelector('.speakers');
 const speakersList = document.createElement('ul');
 const button = document.createElement('p');
+button.className = 'more-button';
 let info;
 let img;
 let naMe;

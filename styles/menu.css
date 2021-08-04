@@ -1,0 +1,12 @@
+.menu-nav-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #ec5242;
+  width: 90vw;
+  height: 100vh;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
