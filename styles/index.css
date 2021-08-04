@@ -133,7 +133,7 @@ ul {
   background-color: rgba(226, 226, 214, 0.1);
   flex-grow: 1;
   display: flex;
-  height: 160px;
+  min-height: 160px;
   align-items: center;
   margin-top: 15px;
   margin-left: 15px;
@@ -147,6 +147,7 @@ ul {
 .program ul li p {
   width: 70%;
   margin-left: 20px;
+  margin-right: 5px;
   color: var(--color-main);
 }
 
@@ -174,6 +175,83 @@ ul {
 a {
   text-decoration: none;
 }
+
+.speakers {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.speakers ul {
+  width: 100%;
+}
+
+.speakers ul li {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 15px;
+  padding-right: 15px;
+}
+
+.speakers ul li img {
+  max-height: 150px;
+  margin-right: 15px;
+}
+
+/* .speakers ul li .info {
+} */
+
+.speakers ul li .name {
+  font-family: var(--font-open);
+  margin: 0;
+  padding-top: 5px;
+}
+
+.speakers ul li .field {
+  font-family: var(--font-lato);
+  font-style: italic;
+  color: var(--color-theme);
+  margin: 0;
+  padding-top: 10px;
+}
+
+.speakers ul li .line-s {
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-main);
+  margin: 15px 0;
+}
+
+.speakers ul li .description {
+  font-size: 0.8rem;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.speakers h3 {
+  margin: 40px auto 30px auto;
+  text-align: center;
+  color: var(--color-dark);
+  font-family: var(--font-lato);
+}
+
+.speakers .more-speakers {
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid var(--color-main);
+  padding: 20px 0;
+  margin: 50px 15px;
+}
+
+.speakers .more-speakers i {
+  color: var(--color-theme);
+  margin-left: 15px;
+}
+
+.partners img {
+  width: 40px;
+  height: 40px;
+}
+
 
 @media screen and (min-width: 768px) {
   .mobile-version {

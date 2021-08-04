@@ -1,39 +1,39 @@
 const speakers = [
   {
-    name: 'Samir ghanim',
-    field: 'Samir Ghanim lorem lorem ipsum',
+    name: 'Yochai Benkler',
+    field: 'Berkman Professor of Entrepreneurial Legal Studies at Harvard Law school',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sint reprehenderit alias. Fugit, deleniti nulla',
-    img: './img/face.jpeg',
+    img: './img/face1.png',
   },
   {
     name: 'Samir ghanim',
     field: 'Samir Ghanim',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sint reprehenderit alias. Fugit, deleniti nulla',
-    img: '#',
+    img: './img/face2.png',
   },
   {
     name: 'Samir ghanim',
     field: 'Samir Ghanim lorem lorem ipsum',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sint reprehenderit alias. Fugit, deleniti nulla',
-    img: '#',
+    img: './img/face3.png',
   },
   {
     name: 'Samir ghanim',
     field: 'Samir Ghanim lorem lorem ipsum',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sint reprehenderit alias. Fugit, deleniti nulla',
-    img: '#',
+    img: './img/face4.png',
   },
   {
     name: 'Samir ghanim',
     field: 'Samir Ghanim lorem lorem ipsum',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sint reprehenderit alias. Fugit, deleniti nulla',
-    img: '#',
+    img: './img/face5.png',
   },
   {
     name: 'Samir ghanim 6',
     field: 'Samir Ghanim lorem lorem ipsum',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sint reprehenderit alias. Fugit, deleniti nulla',
-    img: '#',
+    img: './img/face6.png',
   },
 ];
 
@@ -42,19 +42,22 @@ const speakers = [
 const section = document.querySelector('.speakers');
 const speakersList = document.createElement('ul');
 const button = document.createElement('p');
-button.className = 'more-button';
+button.className = 'more-speakers';
 let info;
 let img;
 let naMe;
 let field;
 let description;
 let speaker;
-button.innerText = 'more >';
+let line;
+button.innerHTML = 'More <i class="fas fa-chevron-down"></i>';
 
 const showSpeaker = (start, end) => {
   for (let i = start; i < end; i += 1) {
     info = document.createElement('div');
     info.className = 'info';
+    line = document.createElement('div');
+    line.className = 'line-s';
     img = document.createElement('img');
     naMe = document.createElement('p');
     naMe.className = 'name';
@@ -69,6 +72,7 @@ const showSpeaker = (start, end) => {
     description.innerText = speakers[i].description;
     info.appendChild(naMe);
     info.appendChild(field);
+    info.appendChild(line);
     info.appendChild(description);
     speaker.appendChild(img);
     speaker.appendChild(info);
