@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   background-color: rgba(236, 82, 66, 0.8);
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -22,7 +22,6 @@
   font-size: 1.5em;
   color: var(--color-dark);
   padding: 10px;
-
 }
 
 .menu-nav-bar ul li a:hover {

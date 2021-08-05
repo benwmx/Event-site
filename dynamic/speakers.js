@@ -80,15 +80,18 @@ const showSpeaker = (start, end) => {
   }
   section.appendChild(speakersList);
 };
+const viewPortWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+if (viewPortWidth > 768) {
+  showSpeaker(0, speakers.length);
+} else {
+  const addMoreSpeakers = () => {
+    section.removeChild(button);
+    showSpeaker(2, speakers.length);
+  };
 
-const addMoreSpeakers = () => {
-  section.removeChild(button);
-  showSpeaker(2, speakers.length);
-};
-
-showSpeaker(0, 2);
-button.addEventListener('click', () => {
-  addMoreSpeakers();
-});
-
-section.appendChild(button);
+  showSpeaker(0, 2);
+  button.addEventListener('click', () => {
+    addMoreSpeakers();
+  });
+  section.appendChild(button);
+}

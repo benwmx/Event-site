@@ -24,6 +24,10 @@ p,
   font-family: var(--font-lato);
 }
 
+h3 {
+  font-family: var(--font-lato);
+}
+
 .line {
   width: 40px;
   height: 2px;
@@ -48,6 +52,7 @@ header nav {
 main {
   position: relative;
   padding-bottom: 100px;
+  /* z-index: 1; */
 }
 
 main::before {
@@ -76,26 +81,142 @@ main h1 span {
   font-size: 1.5rem;
 }
 
-main .details {
+main.index .details {
   border: solid 2px rgb(235, 224, 224);
   margin: 0 15px 0;
   padding: 15px;
 }
 
-main .time-location {
+main.index .time-location {
   font-family: var(--font-cocogoose);
   color: var(--color-dark);
   margin: 0 15px 0;
 }
 
-main .time-location h3 {
+main.index .time-location h3 {
   font-size: 1.5rem;
   margin-bottom: 0;
 }
 
-main .time-location p {
+main.index .time-location p {
   font-size: 1.2rem;
   margin-top: 10px;
+}
+
+/* about */
+main.about .summary {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid var(--color-main);
+  color: var(--color-dark);
+  font-family: var(--font-lato);
+  margin: 15px;
+  padding: 30px;
+}
+
+main.about p {
+  display: block;
+  text-align: center;
+  margin: 40px 15px;
+}
+
+main.about a {
+  display: block;
+  position: relative;
+  text-decoration: underline;
+  text-align: center;
+  color: var(--color-dark);
+  margin: 30px 15px;
+}
+
+.about-logo h3,
+.past-summits h3 {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.about-logo p {
+  margin: 30px 15px;
+  text-align: center;
+}
+
+.about-logo .logo {
+  width: 90%;
+  text-align: center;
+  /* display: block; */
+  border: 2px solid var(--color-main);
+  /* margin: 15px 20px 50px 20px; */
+  margin: 20px auto;
+}
+
+.section-line {
+  background-color: var(--color-main);
+  width: 100%;
+  height: 2px;
+  margin-top: 60px;
+}
+
+.past-summits {
+  padding-bottom: 60px;
+}
+
+.past-summits .description {
+  color: var(--color-dark);
+  margin: 24px 50px;
+}
+
+.past-summits .summit {
+  display: flex;
+  flex-flow: column;
+  margin-top: 30px;
+}
+
+.past-summits .summit li {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  min-height: 325px;
+  max-height: 500px;
+  margin: 20px auto;
+  position: relative;
+  background-size: cover;
+}
+
+.past-summits .summit .summit1 {
+  background-image: url(../img/summit1.jpg);
+}
+
+.past-summits .summit .summit2 {
+  background-image: url(../img/summit2.jpeg);
+}
+
+.past-summits .summit li::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--color-theme);
+  opacity: 0.6;
+}
+
+.past-summits .summit p {
+  z-index: 1;
+  position: relative;
+}
+
+.past-summits .summit .year {
+  font-size: 2rem;
+  font-family: var(--font-open);
+  color: var(--color-main);
+}
+
+.past-summits .summit .event {
+  color: white;
 }
 
 ul {
@@ -136,6 +257,11 @@ ul {
   margin-top: 15px;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.program ul li:hover {
+  border: solid 1px var(--color-main);
+  box-sizing: border-box;
 }
 
 .program ul li p {
@@ -221,7 +347,6 @@ a {
   margin: 40px auto 30px auto;
   text-align: center;
   color: var(--color-dark);
-  font-family: var(--font-lato);
 }
 
 .speakers .more-speakers {
@@ -260,7 +385,6 @@ a {
   padding-top: 40px;
   text-align: center;
   color: var(--color-main);
-  font-family: var(--font-lato);
 }
 
 .partners ul li {
@@ -284,8 +408,25 @@ a {
   padding-bottom: 8px;
 }
 
+.footer.about {
+  background-color: var(--color-dark);
+  padding-top: 40px;
+}
+
+.footer.about p {
+  color: var(--color-main);
+}
+
+.footer-about p {
+  margin: 0;
+}
+
 @media screen and (min-width: 768px) {
   .mobile-version {
+    display: none;
+  }
+
+  .program .button-join {
     display: none;
   }
 
@@ -293,7 +434,51 @@ a {
     display: none;
   }
 
+  .more-speakers {
+    display: none;
+  }
+
   .desktop-version {
     display: block;
   }
+
+  /*  home page */
+  header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .upper-header {
+    width: 100%;
+    height: 20px;
+    position: inherit;
+  }
+
+  .upper-header img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .upper-header ul {
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 5px 10px;
+  }
+
+  .upper-header ul li {
+    margin-left: 30px;
+  }
+
+  .upper-header ul li .lang {
+    font-family: var(--font-lato);
+    color: var(--color-main);
+    margin: 0;
+  }
+
+  nav {
+    width: 100%;
+  }
+
 }

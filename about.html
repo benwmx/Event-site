@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4f02d055e5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/menu-btn.css">
+    <link rel="stylesheet" href="./styles/menu.css">
     <title>Document</title>
 </head>
 
@@ -16,59 +18,78 @@
             <ul>
                 <li><a href="#"><img src="./img/sponsors/facebook.png" alt="image of facebook icon"></a></li>
                 <li><a href="#"><img src="./img/sponsors/twitter.png" alt="image of twitter icon"></a></li>
-                <li>French</li>
+                <li>
+                    <a class="lang">French</a>
+                </li>
             </ul>
         </div>
-        <nav>
+        <nav class="navbar">
             <a class="desktop-version" href="./index.html"><img src="./img/event-logo-gray.png" alt=""></a>
             <div class="menu-btn">
                 <div class="menu-burger"></div>
             </div>
             <ul class="desktop-version">
                 <li><a href="./about.html">About</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#">Sponsor</a></li>
-                <li><a href="#">News</a></li>
+                <li><a href="./index.html#program">Program</a></li>
+                <li><a href="./index.html#join">Join</a></li>
+                <li><a href="./index.html#partners">Sponsor</a></li>
+                <li class="news"><a
+                        href="https://www.google.com/search?q=moroccan+devs&sxsrf=ALeKk00qTLXiYvb930r_YyecFGexWmMrqQ:1628161579516&source=lnms&tbm=nws&sa=X&ved=2ahUKEwjjyNXE3pnyAhVSqxoKHcecBIkQ_AUoA3oECAEQBQ&biw=1920&bih=968">News</a>
+                </li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="about">
         <h1>
             Moroccan Developers
             <br>
             Anual Summit 2021
         </h1>
         <div class="summary">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum optio error eligendi beatae autem distinctio
-            quaerat dolores, nemo necessitatibus tempora enim vel nihil explicabo quasi. Aperiam est dolores quasi
-            autem?
+            The Global Summit brings together the community of experts, academics, and activists who comprise the
+            Creative Commons
+            affiliate network in a different country every two years.
+            This year, we hope to expand our invitation list including organizations and individuals who want to work
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, accusantium!</p>
-        <a class="email" href="#">Lorem, ipsum dolor ></a>
+        <p>Please contact us at per Email for any further questions about the Annual Summit.</p>
+        <a class="email" href="#">mdannualsummit@moroccandev.org <i class="fas fa-chevron-right"></i></a>
     </main>
     <section class="about-logo">
-        <h3>Moroccan Developers Anual Summit Logo</h3>
+        <h3>Moroccan Developers Annual Summit Logo</h3>
+        <div class="line"></div>
+        <p>The logo of CC Global Summit 2015 was decided through the logo competition from 8. June to 7. July.
+            After online public voting and Selection Committee's judging process, the logo from Naresh Agrawal won the
+            prize.
+            After consultation with Mr. Agrawal we optimized the prize-winning-logo for this year's summit as following:
+        </p>
+        <div class="logo">
+            <img src="./img/event-logo-gray.png" alt="the logo of the moroccan developers association">
+        </div>
+
     </section>
+    <div class="section-line"></div>
     <section class="past-summits">
         <h3>See the Past Annual Summits</h3>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="line"></div>
+        <p class="description">Take a look at the last two MD Annual Summits which took place in Casablanca and in
+            Tanger.</p>
         <ul class="summit">
-            <li>
-                <p>2020</p>
-                <p>MD Annual Summit 2020 Casablanca</p>
+            <li class="summit1">
+                <p class="year">2020</p>
+                <p class="event">MD Annual Summit 2020 Casablanca</p>
             </li>
-            <li>
-                <p>2019</p>
-                <p>MD Annual Summit 2019 Tanger</p>
+            <li class="summit2">
+                <p class="year">2019</p>
+                <p class="event">MD Annual Summit 2019 Tanger</p>
             </li>
         </ul>
     </section>
-    <footer>
-        <img src="./img/logo-black.png" alt="image of moroccan developers association">
-        <p>2021 Moroccan Developers Association Rights Reserved</p>
+    <footer class="footer about">
+        <img src="./img/logo-gray.png" alt="image of moroccan developers association">
+        <p>Moroccan Developers Association Rights Reserved 2021</p>
     </footer>
-    <script src="./dynamic/menu-logo.js"></script>
+    <script src="./dynamic/menu.js"></script>
+
 </body>
 
 </html>
