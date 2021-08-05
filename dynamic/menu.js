@@ -13,3 +13,12 @@ menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('open-menu');
   showMenu();
 });
+
+const menuItems = Array.from(document.querySelectorAll('header nav ul li a'));
+
+for (let i = 0; i < menuItems.length; i += 1) {
+  menuItems[i].addEventListener('click', () => {
+    menuBtn.classList.toggle('open-menu');
+    showMenu();
+  });
+}
