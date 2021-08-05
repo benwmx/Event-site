@@ -30,7 +30,7 @@ const speakers = [
     img: './img/face5.png',
   },
   {
-    name: 'Samir ghanim 6',
+    name: 'Samir ghanim',
     field: 'Samir Ghanim lorem lorem ipsum',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sint reprehenderit alias. Fugit, deleniti nulla',
     img: './img/face6.png',
@@ -50,6 +50,7 @@ let field;
 let description;
 let speaker;
 let line;
+let speakerClass;
 button.innerHTML = 'More <i class="fas fa-chevron-down"></i>';
 
 const showSpeaker = (start, end) => {
@@ -66,6 +67,8 @@ const showSpeaker = (start, end) => {
     description = document.createElement('p');
     description.className = 'description';
     speaker = document.createElement('li');
+    speaker.className = 'speaker';
+    speaker.className += i;
     naMe.innerText = speakers[i].name;
     img.setAttribute('src', speakers[i].img);
     field.innerText = speakers[i].field;
@@ -80,8 +83,8 @@ const showSpeaker = (start, end) => {
   }
   section.appendChild(speakersList);
 };
-const viewPortWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-if (viewPortWidth > 768) {
+const viewPortWidth2 = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+if (viewPortWidth2 > 768) {
   showSpeaker(0, speakers.length);
 } else {
   const addMoreSpeakers = () => {
