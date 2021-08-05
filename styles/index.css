@@ -606,10 +606,30 @@ a {
     display: flex;
     justify-content: space-around;
   }
-
-  .about-logo {
-
+ 
+  .past-summits {
+    display: flex;
+    flex-flow: column;
   }
+  .past-summits .summit {
+    width: 100%;
+  flex-flow: row;
+  justify-content: space-around;
+ 
+}
+ .past-summits .description {
+   margin: 24px auto;
+ }
+
+ .past-summits .summit li {
+  height: 100px;
+  width: 40%;
+ }
+
+ .past-summits .summit li:hover {
+  position: static;
+ }
+  
   /* .speakers .speaker0 {
     grid-area: 1/1/2/2;
   } */
