@@ -53,10 +53,13 @@ header nav {
   background-color: transparent;
 }
 
+a {
+  text-decoration: none;
+}
+
 main {
   position: relative;
   padding-bottom: 100px;
-  /* z-index: 1; */
 }
 
 main::before {
@@ -68,7 +71,7 @@ main::before {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.1;
+  opacity: 0.3;
   z-index: 0;
 }
 
@@ -85,6 +88,49 @@ main h1 span {
   font-size: 1.5rem;
 }
 
+.about-logo p {
+  margin: 30px 15px;
+  text-align: center;
+}
+
+.footer-about p {
+  margin: 0;
+}
+
+.footer p {
+  display: inline-block;
+  width: 60%;
+  padding-bottom: 8px;
+}
+
+main.about p {
+  display: block;
+  text-align: center;
+  margin: 40px 15px;
+}
+
+.footer.about {
+  background-color: var(--color-dark);
+  padding-top: 40px;
+}
+
+.program ul li p {
+  width: 70%;
+  margin-left: 20px;
+  margin-right: 5px;
+  color: var(--color-main);
+}
+
+.footer.about p {
+  color: var(--color-main);
+}
+
+.speakers h3 {
+  margin: 40px auto 30px auto;
+  text-align: center;
+  color: var(--color-dark);
+}
+
 main.index .details {
   display: block;
   border: solid 2px rgb(235, 224, 224);
@@ -99,6 +145,24 @@ main.index .time-location {
   margin: 0 15px 0;
 }
 
+.about-logo h3,
+.past-summits h3 {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.past-summits .summit p {
+  z-index: 1;
+  position: relative;
+}
+
+.partners h3 {
+  padding-top: 40px;
+  text-align: center;
+  color: var(--color-main);
+}
+
 main.index .time-location h3 {
   display: block;
   font-size: 1.5rem;
@@ -110,7 +174,6 @@ main.index .time-location p {
   margin-top: 10px;
 }
 
-/* about */
 main.about .summary {
   position: relative;
   background-color: rgb(255, 255, 255);
@@ -121,10 +184,10 @@ main.about .summary {
   padding: 30px;
 }
 
-main.about p {
-  display: block;
-  text-align: center;
-  margin: 40px 15px;
+.partners a {
+  color: var(--color-main);
+  font-family: var(--font-open);
+  font-size: 2rem;
 }
 
 main.about a {
@@ -136,24 +199,10 @@ main.about a {
   margin: 30px 15px;
 }
 
-.about-logo h3,
-.past-summits h3 {
-  width: 100%;
-  text-align: center;
-  margin: 40px 0;
-}
-
-.about-logo p {
-  margin: 30px 15px;
-  text-align: center;
-}
-
 .about-logo .logo {
   width: 90%;
   text-align: center;
-  /* display: block; */
   border: 2px solid var(--color-main);
-  /* margin: 15px 20px 50px 20px; */
   margin: 20px auto;
 }
 
@@ -177,6 +226,34 @@ main.about a {
   display: flex;
   flex-flow: column;
   margin-top: 30px;
+}
+
+.program ul li {
+  background-color: rgba(226, 226, 214, 0.1);
+  flex-grow: 1;
+  display: flex;
+  min-height: 160px;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.speakers ul li {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 15px;
+  padding-right: 15px;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+}
+
+.partners ul li {
+  margin: 20px 0;
+  transition: all 0.1s ease-in-out;
 }
 
 .past-summits .summit li {
@@ -209,11 +286,6 @@ main.about a {
   position: absolute;
   background-color: var(--color-theme);
   opacity: 0.6;
-}
-
-.past-summits .summit p {
-  z-index: 1;
-  position: relative;
 }
 
 .past-summits .summit .year {
@@ -255,27 +327,9 @@ ul {
   list-style-type: none;
 }
 
-.program ul li {
-  background-color: rgba(226, 226, 214, 0.1);
-  flex-grow: 1;
-  display: flex;
-  min-height: 160px;
-  align-items: center;
-  margin-top: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
 .program ul li:hover {
   border: solid 1px var(--color-main);
   box-sizing: border-box;
-}
-
-.program ul li p {
-  width: 70%;
-  margin-left: 20px;
-  margin-right: 5px;
-  color: var(--color-main);
 }
 
 .program ul li .icon {
@@ -299,8 +353,10 @@ ul {
   background-color: var(--color-theme);
 }
 
-a {
-  text-decoration: none;
+.program .button-join:hover {
+  background-color: var(--color-main);
+  border: 2px solid var(--color-theme);
+  color: var(--color-theme);
 }
 
 .speakers {
@@ -311,11 +367,22 @@ a {
   width: 100%;
 }
 
-.speakers ul li {
-  display: flex;
-  margin-top: 50px;
-  margin-left: 15px;
-  padding-right: 15px;
+.speakers ul li:hover {
+  transform: scale(1.1);
+  background-color: #f5eded;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.partners img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer img {
+  width: 120px;
 }
 
 .speakers ul li img {
@@ -350,18 +417,16 @@ a {
   margin: 0;
 }
 
-.speakers h3 {
-  margin: 40px auto 30px auto;
-  text-align: center;
-  color: var(--color-dark);
-}
-
 .speakers .more-speakers {
   cursor: pointer;
   text-align: center;
   border: 1px solid var(--color-main);
   padding: 20px 0;
   margin: 50px 15px;
+}
+
+.speakers .more-speakers:hover {
+  background-color: var(--color-main);
 }
 
 .speakers .more-speakers i {
@@ -377,25 +442,12 @@ a {
   font-family: var(--font-lato);
 }
 
-.partners img {
-  width: 40px;
-  height: 40px;
-}
-
-.partners a {
-  color: var(--color-main);
-  font-family: var(--font-open);
-  font-size: 2rem;
-}
-
-.partners h3 {
-  padding-top: 40px;
-  text-align: center;
-  color: var(--color-main);
-}
-
-.partners ul li {
-  margin: 20px 0;
+.partners ul li:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
 
 .footer {
@@ -403,29 +455,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
-
-.footer img {
-  width: 120px;
-}
-
-.footer p {
-  display: inline-block;
-  width: 60%;
-  padding-bottom: 8px;
-}
-
-.footer.about {
-  background-color: var(--color-dark);
-  padding-top: 40px;
-}
-
-.footer.about p {
-  color: var(--color-main);
-}
-
-.footer-about p {
-  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -449,7 +478,6 @@ a {
     display: block;
   }
 
-  /*  home page */
   header {
     background-color: white;
     position: absolute;
@@ -473,7 +501,19 @@ a {
     flex-flow: row;
     align-items: center;
     justify-content: flex-end;
-    /* padding-right: 25px; */
+  }
+
+  .upper-header ul li {
+    margin-left: 30px;
+  }
+
+  .program ul li {
+    width: 20%;
+    flex-flow: column;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-sizing: border-box;
   }
 
   nav ul.nav-desktop li {
@@ -504,10 +544,6 @@ a {
     padding: 5px 10px;
   }
 
-  .upper-header ul li {
-    margin-left: 30px;
-  }
-
   .upper-header ul li .lang {
     cursor: pointer;
     font-family: var(--font-lato);
@@ -532,11 +568,9 @@ a {
   }
 
   main h1 {
-  
-  /* margin: 0 15px 20px; */
-  padding-top: 240px;
-  
-}
+    font-size: 2.5rem;
+    padding-top: 240px;
+  }
 
   main.index .details,
   main.about .summary {
@@ -544,16 +578,29 @@ a {
     margin: 0 auto 0 auto;
   }
 
-   .about-logo p,
+  nav .logo {
+    height: 100px;
+    margin-left: 20px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+  }
+
+  .about-logo p,
   .about-logo .logo {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  nav .logo {
-    height: 100px;
-    margin-left: 20px;
+  nav .logo:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
   }
 
   .program {
@@ -565,15 +612,6 @@ a {
     justify-content: center;
     padding-right: 5%;
     padding-left: 5%;
-  }
-
-  .program ul li {
-    width: 20%;
-    flex-flow: column;
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    box-sizing: border-box;
   }
 
   .program ul li p {
@@ -606,31 +644,28 @@ a {
     display: flex;
     justify-content: space-around;
   }
- 
+
   .past-summits {
     display: flex;
     flex-flow: column;
   }
+
   .past-summits .summit {
     width: 100%;
-  flex-flow: row;
-  justify-content: space-around;
- 
-}
- .past-summits .description {
-   margin: 24px auto;
- }
+    flex-flow: row;
+    justify-content: space-around;
+  }
 
- .past-summits .summit li {
-  height: 100px;
-  width: 40%;
- }
+  .past-summits .description {
+    margin: 24px auto;
+  }
 
- .past-summits .summit li:hover {
-  position: static;
- }
-  
-  /* .speakers .speaker0 {
-    grid-area: 1/1/2/2;
-  } */
+  .past-summits .summit li {
+    height: 100px;
+    width: 40%;
+  }
+
+  .past-summits .summit li:hover {
+    position: static;
+  }
 }

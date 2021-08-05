@@ -50,7 +50,6 @@ let field;
 let description;
 let speaker;
 let line;
-let speakerClass;
 button.innerHTML = 'More <i class="fas fa-chevron-down"></i>';
 
 const showSpeaker = (start, end) => {
